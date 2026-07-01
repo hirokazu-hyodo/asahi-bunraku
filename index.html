@@ -5,18 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【デモ版】朝日文楽会 オフィシャルサイト</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ナビゲーションや追加ボタンの簡易調整（style.cssに記述しても大丈夫です） */
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #5c2c16;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section-btn-area {
+            text-align: right;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>朝日文楽会</h1>
         <p>西予市指定無形民俗文化財</p>
+        <nav>
+            <a href="about.html">朝日文楽について</a>
+        </nav>
     </header>
 
     <div class="hero">
         <div class="hero-text">
             <span class="main">西予三瓶町の伝統文化</span>
-            <span class="sub">愛媛県無形文化財　朝日文楽会</span>
+            <span class="sub">愛媛県無形文化財 朝日文楽会</span>
         </div>
     </div>    
 
@@ -63,8 +86,11 @@
         </section>
 
         <section>
-            <h2>朝日文楽会について</h2>
+            <h2>朝日文楽について</h2>
             <p>愛媛県西予市旧三瓶町にて、古くから大切に受け継がれてきた伝統芸能「文楽」。私たちは、その歴史の灯火を絶やすことなく、次の世代、そして世界へと繋ぐための活動を行っています。</p>
+            <div class="section-btn-area">
+                <a href="about.html" class="btn">由緒・歴史を詳しく見る</a>
+            </div>
         </section>
 
         <section class="contact-section">

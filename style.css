@@ -198,3 +198,31 @@ footer {
     font-size: 0.9rem;
     letter-spacing: 0.1em;
 }
+/* ヘッダーを半透明にして画像の上に被せる設定 */
+        header {
+            position: absolute; /* ヘッダーを浮かせて画像の上に重ねる */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* 黒色で60%の透明度（0.0〜1.0で調整可能） */
+            z-index: 10; /* 画像より手前に表示させる */
+            padding: 15px 0; /* 上下の余白 */
+            text-align: center; /* 文字を中央揃え */
+        }
+
+        /* ヘッダー内の文字色を白にして見やすくする */
+        header h1, header p {
+            color: #ffffff;
+            margin: 5px 0;
+        }
+
+        /* 既存の茶色いリンク色(#5c2c16)を白で上書き */
+        nav a {
+            color: #ffffff !important; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* リンクに少し影をつけて読みやすくする */
+        }
+
+        /* もしhero画像の上の隙間が気になる場合、heroのマージンをリセット */
+        .hero {
+            margin-top: 0;
+        }

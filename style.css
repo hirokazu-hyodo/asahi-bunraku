@@ -68,7 +68,7 @@ nav a:hover {
 .hero {
     width: 100%;
     height: 400px;
-    background-image: url('top01.jpg');
+    background-image: url('top_header_01.png');
     background-size: cover;
     background-position: top center;
     display: flex;

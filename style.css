@@ -212,3 +212,9 @@ footer {
     font-size: 0.9rem;
     letter-spacing: 0.1em;
 }
+
+/* ボタン配置エリア（中央揃え） */
+.section-btn-area {
+    text-align: center;
+    margin-top: 15px;
+}

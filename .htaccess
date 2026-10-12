@@ -1,0 +1,21 @@
+# ===== 1. HTTP を HTTPS に自動転送（ロリポップ公式マニュアル「URLの書き換え」の記述） =====
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ===== 2. フォルダの中身の一覧表示を禁止 =====
+Options -Indexes
+
+# ===== 3. 「.」で始まるファイル（.ftp-deploy-sync-state.json など）へのWebアクセスを禁止 =====
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# ===== 4. セキュリティヘッダー（mod_headers が無い環境では何も起きません） =====
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>

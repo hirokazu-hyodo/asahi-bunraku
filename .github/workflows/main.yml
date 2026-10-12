@@ -15,7 +15,7 @@ jobs:
           protocol: ftps
           port: 21
           server-dir: ./
-          dry-run: true
+          dry-run: false
           exclude: |
                **/.git*
                **/.git*/**

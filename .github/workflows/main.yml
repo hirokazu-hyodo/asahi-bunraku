@@ -16,3 +16,9 @@ jobs:
           port: 21
           server-dir: ./
           dry-run: true
+          exclude: |
+               **/.git*
+               **/.git*/**
+               **/node_modules/**
+               **/.DS_Store
+               README.md
